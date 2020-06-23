@@ -61,7 +61,7 @@ public class DarkSky {
         System.out.println("Low Temp: " + low);
         System.out.println("Feels Like Temp: " +feelsLike);
 
-        Assert.assertTrue(isFeelsLikeTempBetweenLowTempandHighTemp);
+        Assert.assertTrue(isFeelsLikeTempBetweenLowTempandHighTemp,"Feels like Temp is not between High Temp and Low Temp");
 
     }
 }
