@@ -38,7 +38,7 @@ public class DarkSky {
     }
 
     @Test
-    public void verifyFeelsLikeTemp() {
+    public void verifyFeelsLikeTempBetweenLowTempAndHighTemp () {
         String feelsLikeTempDegrees = driver.findElement(By.xpath("//span[@class='feels-like-text']")).getText();
         String lowTempDegrees = driver.findElement(By.xpath("//span[@class='low-temp-text']")).getText();
         String highTempDegrees = driver.findElement(By.xpath("//span[@class='high-temp-text']")).getText();
@@ -57,9 +57,9 @@ public class DarkSky {
             isFeelsLikeTempBetweenLowTempandHighTemp = true;
         }
 
-        System.out.println("High Temp: " + high);
         System.out.println("Low Temp: " + low);
         System.out.println("Feels Like Temp: " +feelsLike);
+        System.out.println("High Temp: " + high);
 
         Assert.assertTrue(isFeelsLikeTempBetweenLowTempandHighTemp,"Feels like Temp is not between High Temp and Low Temp");
 
