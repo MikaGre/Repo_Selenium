@@ -28,8 +28,8 @@ public class PhpTravel {
 
     @Test
     public void fillSearchHotelForm() {
-        WebElement checkInDate = driver.findElement(By.xpath("//div[@data-month='6' and text()='17']"));
-
+        WebElement destinationBox = driver.findElement(By.cssSelector("body.with-waypoint-sticky:nth-child(2) div.select2-drop.select2-display-none.select2-with-searchbox.select2-drop-active:nth-child(15) div.select2-search > input.select2-input"));
+        destinationBox.sendKeys("");
     }
 
 }
